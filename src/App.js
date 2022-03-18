@@ -10,7 +10,7 @@ export default class MainPage extends React.Component {
   }
 
   getLink = () => {
-    document.getElementById('myframe').src = this.state.link;
+    document.getElementById('redactorFrame').src = this.state.link;
   }
 
   render() {
@@ -19,7 +19,6 @@ export default class MainPage extends React.Component {
           
           <Form onSubmit={e => {
                 e.preventDefault();
-                console.log(this.state.link)
                 this.getLink();
             }} >
             <Form.Group>
@@ -34,7 +33,7 @@ export default class MainPage extends React.Component {
                   </Button>
               </div>
             </Form.Group>
-            <iframe id='myframe' src="about:blank" width="1200" height="600">
+            <iframe id='redactorFrame' src="about:blank" width="1200" height="600">
             </iframe>
           </Form>      
       </div>
